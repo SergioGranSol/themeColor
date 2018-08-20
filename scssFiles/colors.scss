@@ -1,12 +1,11 @@
-/*
-* ================================
-* ThemeColor -- Color catalogue
-* Fecha:        Agosto 2018
-* Autor:        Sergio Granados Solano
-* ================================
-*/
+// ====================================
+// ThemeColor -- Color catalogue
+// Fecha:        Agosto 2018
+// Autor:        Sergio Granados Solano
+// ====================================
 
-/* ========= Gray scale ========= */
+// ========= Gray scale ===============
+
 $white:     #fff !default;
 $gray-100:  #f8f9fa !default;
 $gray-200:  #e9ecef !default;
@@ -19,7 +18,8 @@ $gray-800:  #343a40 !default;
 $gray-900:  #212529 !default;
 $black:     #000 !default;
 
-/* == Original bootstrap colors = */
+// == Original bootstrap colors =======
+
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -31,34 +31,37 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-/* ========= Blue scale ========= */
+// ========= Blue scale ===============
+
 $blue1: #1c84c6 !default;
 $blue2: #23c6c8 !default;
 $blue3: #294f75 !default;
 $blue4: #0ab1fc !default;
 $blue5: #02a5de !default;
 
-/* ========= Purple scale ======= */
+// ========= Purple scale =============
+
 $purple1: #b052c0 !default;
 $purple2: #a54caa !default;
 
-/* ========= Pink scale ========= */
+// ========= Pink scale ===============
+
 $pink1: #f1709c !default;
 
-/* ========= Red scale ========== */
+// ========= Red scale ================
 $red1: #ed5565 !default;
 $red2: #f55145 !default;
 $red3: #e72510 !default;
 
-/* ========= Orange scale ======= */
+// ========= Orange scale =============
 
 
-/* ========= Yellow scale ======= */
+// ========= Yellow scale =============
 $yellow1: #f8ac59 !default;
 $yellow2: #ffb80f !default;
 $yellow3: #e08b27 !default;
 
-/* ========= Green scale ======== */
+// ========= Green scale ==============
 $green1: #1ab394 !default;
 $green2: #92c755 !default;
 $green3: #29b2a6 !default;

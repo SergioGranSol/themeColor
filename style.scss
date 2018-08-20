@@ -1,23 +1,11 @@
-/*
-* ================================
-* IPN - CSII
-* Sistema:      SIADE
-* Modulo:       Estilos del sistema en general
-* Submodulo:    
-* Fecha:        Agosto 2018
-* Autor:        Sergio Granados Solano
-* ================================
-*/
+/* ====================================
+ * ThemeColor
+ * Fecha:        Agosto 2018
+ * Autor:        Sergio Granados Solano
+ * ====================================
+ */
 
 @import 'scssFiles/colors.scss';
-@import 'scssFiles/components.scss';
 @import 'scssFiles/themes.scss';
+@import 'scssFiles/components.scss';
 @import 'scssFiles/utils.scss';
-
-@each $theme, $name in $themes {
-  body.#{$theme} {
-    @each $colorName, $value in $name {
-      @include basicBootstrapComponents($colorName, $value);
-    }
-  }
-}

@@ -1,10 +1,8 @@
-/*
-* ================================
-* ThemeColor -- Mixin for add theme colors to bootstrap components
-* Fecha:        Agosto 2018
-* Autor:        Sergio Granados Solano
-* ================================
-*/
+// ================================================================
+// ThemeColor -- Mixin for add theme colors to bootstrap components
+// Fecha:        Agosto 2018
+// Autor:        Sergio Granados Solano
+// ================================================================
 
 @mixin basicBootstrapComponents($colorName, $value) {
   .table-#{$colorName},
@@ -200,4 +198,12 @@
 
 @function theme-color-level($color, $level) {
   @return mix(if($level > 0, $black, $white), $color, abs($level) * 8%);
+}
+
+@each $theme, $name in $themes {
+  body.#{$theme} {
+    @each $colorName, $value in $name {
+      @include basicBootstrapComponents($colorName, $value);
+    }
+  }
 }
