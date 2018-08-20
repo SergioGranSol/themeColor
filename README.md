@@ -1,10 +1,10 @@
 # ThemeColor
 
-Create a new bootstrap palette color
+Create a new [Bootstrap](https://getbootstrap.com/) color palette
 
 ## Getting Started
 
-This scss files will help you to create new palettes color and apply them whit just one class
+This scss file will help you to create new color palettes and apply them whit just one class
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ You must install [Sass](https://sass-lang.com/), then you'll be able to run the 
 
 Clone or download
 
-## Running the tests
+## Usage
 
 Simply create an array in themes.scss file and add it to themes array 
 
@@ -39,7 +39,7 @@ $themes: (
 );
 ```
 
-You can chose any color from colors.scss file or add new colors
+You can chose any color from colors.scss file or add new colors when create your theme array
 
 ## Deployment
 
@@ -49,7 +49,7 @@ Compile style.scss file
 sass style.scss style.css
 ```
 
-To see your new theme, add a class to body tag using the name of your theme
+Add a class to body tag using the name of your theme
 
 ```
 <body class="myTheme">
