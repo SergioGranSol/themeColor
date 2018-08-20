@@ -8,7 +8,7 @@ This scss file will help you to create new color palettes and apply them whit ju
 
 ### Prerequisites
 
-You must install [Sass](https://sass-lang.com/), then you'll be able to run the sass executable to compile .sass and .scss files to .css files
+You must install [Sass](https://sass-lang.com/), then you'll be able to compile .sass and .scss files to .css files
 
 ### Installing
 
@@ -67,5 +67,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* 
-
+* If you find util piece of code and use it, please credit the author
