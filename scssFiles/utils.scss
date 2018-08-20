@@ -1,0 +1,207 @@
+/*
+* ================================
+* ThemeColor -- Utils
+* Fecha:        Agosto 2018
+* Autor:        Sergio Granados Solano
+* ================================
+*/
+
+$sizesPixels: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
+  11: 11px,
+  12: 12px,
+  13: 13px,
+  14: 14px,
+  15: 15px,
+  16: 16px,
+  17: 17px,
+  18: 18px,
+  19: 19px,
+  20: 20px,
+  30: 30px,
+  40: 40px,
+  50: 50px,
+  60: 60px,
+  70: 70px,
+  80: 80px,
+  90: 90px,
+  100: 100px,
+  110: 110px,
+  120: 120px,
+  130: 130px,
+  140: 140px,
+  150: 150px,
+  160: 160px,
+  170: 170px,
+  180: 180px,
+  190: 190px,
+  200: 200px,
+  220: 220px,
+  240: 240px,
+  260: 260px,
+  280: 280px,
+  300: 300px,
+  auto: auto
+);
+
+$sizesPercentage: (
+  10: 10%,
+  20: 20%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+$overflow: (
+  auto: auto,
+  hidden: hidden,
+  visible: visible,
+  scroll: scroll
+);
+
+$cursor: (
+  pointer: pointer,
+  initial: initial,
+  move: move
+);
+
+@each $size, $value in $sizesPixels {
+    @if $size != auto {
+        @if $size >= 20 {
+            .ut-hpx-#{$size} {
+                height: $value;
+            }
+
+            .ut-wpx-#{$size} {
+                width: $value;
+            }
+        }
+        @if $size >= 5 and $size <= 20 {
+            .ut-fs-#{$size} {
+                font-size: $value;
+            }
+        }
+        @if $size <= 100 {
+            .ut-m-#{$size} {
+                margin: $value;
+            }
+
+            .ut-mt-#{$size} {
+                margin-top: $value;
+            }
+
+            .ut-mb-#{$size} {
+                margin-bottom: $value;
+            }
+
+            .ut-ml-#{$size} {
+                margin-left: $value;
+            }
+
+            .ut-mr-#{$size} {
+                margin-right: $value;
+            }
+
+            .ut-p-#{$size} {
+                padding: $value;
+            }
+
+            .ut-pt-#{$size} {
+                padding-top: $value;
+            }
+
+            .ut-pb-#{$size} {
+                padding-bottom: $value;
+            }
+
+            .ut-pl-#{$size} {
+                padding-left: $value;
+            }
+
+            .ut-pr-#{$size} {
+                padding-right: $value;
+            }
+        }
+    } @else {
+        .ut-m-#{$size} {
+            margin: $value;
+        }
+
+        .ut-mt-#{$size} {
+            margin-top: $value;
+        }
+
+        .ut-mb-#{$size} {
+            margin-bottom: $value;
+        }
+
+        .ut-ml-#{$size} {
+            margin-left: $value;
+        }
+
+        .ut-mr-#{$size} {
+            margin-right: $value;
+        }
+
+        .ut-p-#{$size} {
+            padding: $value;
+        }
+
+        .ut-pt-#{$size} {
+            padding-top: $value;
+        }
+
+        .ut-pb-#{$size} {
+            padding-bottom: $value;
+        }
+
+        .ut-pl-#{$size} {
+            padding-left: $value;
+        }
+
+        .ut-pr-#{$size} {
+            padding-right: $value;
+        }
+    }
+}
+
+@each $size, $value in $sizesPercentage {
+    .ut-h-#{$size} {
+        height: $value;
+    }
+
+    .ut-w-#{$size} {
+        width: $value;
+    }
+}
+
+@each $overflow, $value in $overflow {
+    .ut-overflow-#{$overflow} {
+        overflow: $value;
+    }
+
+    .ut-overflow-x-#{$overflow} {
+        overflow-x: $value;
+    }
+
+    .ut-overflow-y-#{$overflow} {
+        overflow-y: $value;
+    }
+}
+
+@each $cursor, $value in $cursor {
+    .ut-cursor-#{$cursor} {
+        cursor: $value;
+    }
+}

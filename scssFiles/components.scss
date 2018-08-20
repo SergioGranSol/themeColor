@@ -1,0 +1,203 @@
+/*
+* ================================
+* ThemeColor -- Mixin for add theme colors to bootstrap components
+* Fecha:        Agosto 2018
+* Autor:        Sergio Granados Solano
+* ================================
+*/
+
+@mixin basicBootstrapComponents($colorName, $value) {
+  .table-#{$colorName},
+  .table-#{$colorName} > th,
+  .table-#{$colorName} > td {
+    background-color: theme-color-level($value, -9);
+  }
+
+  .table-hover .table-#{$colorName}:hover {
+    background-color: darken($value, 5%);
+  }
+
+  .table-hover .table-#{$colorName}:hover > td,
+  .table-hover .table-#{$colorName}:hover > th {
+    background-color: darken($value, 5%);
+  }
+
+  .btn-#{$colorName} {
+    color: color-yiq($value);
+    background-color: $value;
+    border-color: $value;
+  }
+
+  .btn-#{$colorName}:hover {
+    color: color-yiq(darken($value, 7.5%));
+    background-color: darken($value, 7.5%);
+    border-color: darken($value, 7.5%);
+  }
+
+  .btn-#{$colorName}:focus, .btn-#{$colorName}.focus {
+    box-shadow: 0 0 0 0.2rem rgba($value, .5);
+  }
+
+  .btn-#{$colorName}.disabled, .btn-#{$colorName}:disabled {
+    color: color-yiq($value);
+    background-color: $value;
+    border-color: $value;
+  }
+
+  .btn-#{$colorName}:not(:disabled):not(.disabled):active, .btn-#{$colorName}:not(:disabled):not(.disabled).active,
+  .show > .btn-#{$colorName}.dropdown-toggle {
+    color: olor-yiq(darken($value, 10%)); 
+    background-color: darken($value, 10%);
+    border-color: darken($value, 12.5%);
+  }
+
+  .btn-#{$colorName}:not(:disabled):not(.disabled):active:focus, .btn-#{$colorName}:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-#{$colorName}.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba($value, .5);
+  }
+
+  .btn-outline-#{$colorName} {
+    color: $value;
+    background-color: transparent;
+    background-image: none;
+    border-color: $value;
+  }
+
+  .btn-outline-#{$colorName}:hover {
+    color: color-yiq($value);
+    background-color: darken($value, 10%);
+    border-color: darken($value, 10%);
+  }
+
+  .btn-outline-#{$colorName}:focus, .btn-outline-#{$colorName}.focus {
+    box-shadow: 0 0 0 0.2rem rgba($value, .5);
+  }
+
+  .btn-outline-#{$colorName}.disabled, .btn-outline-#{$colorName}:disabled {
+    color: darken($value, 10%);
+    background-color: transparent;
+  }
+
+  .btn-outline-#{$colorName}:not(:disabled):not(.disabled):active, .btn-outline-#{$colorName}:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-#{$colorName}.dropdown-toggle {
+    color: color-yiq($value);
+    background-color: darken($value, 10%);
+    border-color: darken($value, 10%);
+  }
+
+  .btn-outline-#{$colorName}:not(:disabled):not(.disabled):active:focus, .btn-outline-#{$colorName}:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-#{$colorName}.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba($value, .5);
+  }
+
+  .badge-#{$colorName} {
+    color: color-yiq($value);
+    background-color: $value;
+  }
+
+  .badge-#{$colorName}[href]:hover, .badge-#{$colorName}[href]:focus {
+    color: color-yiq($value);
+    text-decoration: none;
+    background-color: darken($value, 10%);
+  }
+  
+  .alert-#{$colorName} {
+    color: theme-color-level($value, 6);
+    background-color: theme-color-level($value, -9);
+    border-color: theme-color-level($value, -10);
+  }
+
+  .alert-#{$colorName} hr {
+    border-top-color: darken(theme-color-level($value, -10), 5%);
+  }
+
+  .alert-#{$colorName} .alert-link {
+    color: darken(theme-color-level($value, 6), 10%);
+  }
+
+  .list-group-item-#{$colorName} {
+    color: theme-color-level($value, 6);
+    background-color: theme-color-level($value, -9);
+  }
+
+  .list-group-item-#{$colorName}.list-group-item-action:hover, .list-group-item-#{$colorName}.list-group-item-action:focus {
+    color: theme-color-level($value, 6);
+    background-color: theme-color-level($value, -9);
+  }
+
+  .list-group-item-#{$colorName}.list-group-item-action.active {
+    color: $white;
+    background-color: theme-color-level($value, 6);
+    border-color: theme-color-level($value, 6);
+  }
+
+  .bg-#{$colorName} {
+    background-color: $value !important;
+  }
+
+  .bg-gradient-#{$colorName} {
+    background: $value !important;
+    background: -moz-linear-gradient(-45deg, lighten( $value, 10%) 0, $value 100%) !important;
+    background: -webkit-linear-gradient(-45deg, lighten( $value, 10%) 0, $value 100%) !important;
+    background: linear-gradient(135deg, lighten( $value, 10%) 0, $value 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$value', endColorstr='$value', GradientType=1) !important;
+  }
+
+  a.bg-#{$colorName}:hover, a.bg-#{$colorName}:focus,
+  button.bg-#{$colorName}:hover,
+  button.bg-#{$colorName}:focus {
+    background-color: darken($value, 10%) !important;
+  }
+
+  .border-#{$colorName} {
+    border-color: $value !important;
+  }
+
+  .text-#{$colorName} {
+    color: $value !important;
+  }
+
+  a.text-#{$colorName}:hover, a.text-#{$colorName}:focus {
+    color: darken($value, 10%) !important;
+  }
+ 
+  @if ($colorName == 'primary'){
+    a {
+      color: $value;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: $value;
+    }
+
+    .page-item.active .page-link {
+      color: #fff;
+      background-color: $value;
+      border-color: $value;
+    }
+
+    .list-group-item.active {
+      color: #fff;
+      background-color: $value;
+      border-color: $value;
+    }
+
+    .custom-radio .custom-control-input:checked~.custom-control-label::before {
+      background-color: $value;
+    }
+
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+      background-color: $value;
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+      color: #fff;
+      background-color: $value;
+    }
+  }
+}
+
+@function theme-color-level($color, $level) {
+  @return mix(if($level > 0, $black, $white), $color, abs($level) * 8%);
+}
