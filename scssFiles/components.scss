@@ -44,7 +44,7 @@
 
   .btn-#{$colorName}:not(:disabled):not(.disabled):active, .btn-#{$colorName}:not(:disabled):not(.disabled).active,
   .show > .btn-#{$colorName}.dropdown-toggle {
-    color: olor-yiq(darken($value, 10%)); 
+    color: color-yiq(darken($value, 10%)); 
     background-color: darken($value, 10%);
     border-color: darken($value, 12.5%);
   }
@@ -165,18 +165,18 @@
     }
 
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-      color: #fff;
+      color: color-yiq($value);
       background-color: $value;
     }
 
     .page-item.active .page-link {
-      color: #fff;
+      color: color-yiq($value);
       background-color: $value;
       border-color: $value;
     }
 
     .list-group-item.active {
-      color: #fff;
+      color: color-yiq($value);
       background-color: $value;
       border-color: $value;
     }
@@ -190,9 +190,23 @@
     }
 
     .custom-control-input:checked~.custom-control-label::before {
-      color: #fff;
+      color: color-yiq($value);
       background-color: $value;
     }
+  }
+}
+
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= 150) {
+    @return #4E4E4F;
+  } @else {
+    @return #fff;
   }
 }
 
