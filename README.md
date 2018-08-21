@@ -63,7 +63,7 @@ Add a class to body tag using the name of your theme
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/SergioGranSol/themeColor/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
