@@ -8,10 +8,12 @@
   .table-#{$colorName},
   .table-#{$colorName} > th,
   .table-#{$colorName} > td {
+    color: color-yiq($value);
     background-color: theme-color-level($value, -9);
   }
 
   .table-hover .table-#{$colorName}:hover {
+    color: color-yiq($value);
     background-color: darken($value, 5%);
   }
 
