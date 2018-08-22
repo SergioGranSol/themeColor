@@ -49,7 +49,7 @@ Compile style.scss file
 sass style.scss style.css
 ```
 
-Add a class to body tag using the name of your theme
+Add a class to body tag using the name of your theme to [see the result](https://sergiogransol.github.io/themeColor/)
 
 ```
 <body class="myTheme">
