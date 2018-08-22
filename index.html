@@ -21,6 +21,11 @@
         z-index: 1;
         display: block;
       }
+      .footer {
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+      }
     </style>
     <!-- icons -->
     <link href="favicon.ico" rel="icon">
@@ -1426,21 +1431,20 @@
         </div>
       </div>
     </div>
-  </body>
 
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">Sergio Granados - Initial work - <a href="https://github.com/SergioGranSol/themeColor">SergioGranSol</a></span>
-    </div>
-  </footer>
+    <footer class="footer w-100 p-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Sergio Granados - Initial work - <a href="https://github.com/SergioGranSol/themeColor">SergioGranSol</a></span>
+      </div>
+    </footer>
 
-  <script type="text/javascript">
-    $(function(){
-      $("#changeColor").on('change', function(){
-        $("body").attr('class', $(this).val());
-        $("#themeName").html($("option[value="+$(this).val()+"]").text());
+    <script type="text/javascript">
+      $(function(){
+        $("#changeColor").on('change', function(){
+          $("body").attr('class', $(this).val());
+          $("#themeName").html($("option[value="+$(this).val()+"]").text());
+        });
       });
-    });
-  </script>
-
+    </script>
+  </body>
 </html>
