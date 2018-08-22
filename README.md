@@ -64,7 +64,3 @@ Add a class to body tag using the name of your theme to [see the result](https:/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/SergioGranSol/themeColor/blob/master/LICENSE) file for details
-
-## Acknowledgments
-
-* If you find util piece of code and use it, please credit the author
