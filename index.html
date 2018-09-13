@@ -21,6 +21,15 @@
         z-index: 1;
         display: block;
       }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .main {
+         margin-top: 8em;
+      }
       .footer {
         position: fixed;
         bottom: 0;
@@ -37,12 +46,12 @@
   </head>
 
   <body class="">
-    <header style="margin: 0 auto; padding: 2em; text-align: center; background: #34495e; color: #fff;">
+    <header class="header bg-dark text-white text-center p-3 w-100">
       <h1>ThemeColor</h1>
       <h5>Create a new Bootstrap color palette</h5>
     </header>
 
-    <main role="main"  class="container">
+    <main role="main" class="main container mb-5">
       <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
